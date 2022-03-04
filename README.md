@@ -13,4 +13,4 @@ Most_Expensive_Product =
 Total_Sales_Top_10_Products = 
             CALCULATE([Total_Sales],
                 TOPN(10 , VALUES('Product'[ProductName]), [Total_Sales] , DESC))
-       ```
+```
