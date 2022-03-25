@@ -20,3 +20,6 @@ Total_Sales_Top_10_Products =
 https://app.powerbi.com/view?r=eyJrIjoiOWNiMDEzZmYtNTAzMS00NDdhLTgwZTUtZmExZjBhY2Y0NjIwIiwidCI6IjQ5OWJjMjFhLTc2NDAtNGJmZi1hNjMzLTU3NmY0NmZkNmJmNCJ9
 ![Screenshot (90)](https://user-images.githubusercontent.com/19778041/160073077-628f9813-3868-49bd-bdb1-2a051d11b208.png)
 
+### => Sales Percentage Summarize by Region and Year
+https://app.powerbi.com/view?r=eyJrIjoiZDZkMzQ1NGYtYjZkZC00ZTI5LTljYzQtMDAxNjBlNjIxZDNjIiwidCI6IjQ5OWJjMjFhLTc2NDAtNGJmZi1hNjMzLTU3NmY0NmZkNmJmNCJ9
+![Screenshot (91)](https://user-images.githubusercontent.com/19778041/160074104-face1a4d-3c4f-4623-9a67-8a0e92332f44.png)
