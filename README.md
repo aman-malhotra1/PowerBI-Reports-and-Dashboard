@@ -23,6 +23,14 @@ Total_Sales_Top_10_Products =
             CALCULATE([Total_Sales],
                 TOPN(10 , VALUES('Product'[ProductName]), [Total_Sales] , DESC))
 ```
+### => Show only Top 10 Products
+```
+Top_10_Products = 
+            CALCULATE([Total_Sales] ,
+                    FILTER(VALUES('Product'[ProductName]),
+                            IF(RANKX(All('Product'),[Total_Sales],,DESC) <=10,[Total_Sales],BLANK())))
+
+```
 
 ### => Stock Price Percentage Difference from date selected
 
