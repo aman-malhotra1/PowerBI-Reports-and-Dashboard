@@ -61,18 +61,19 @@ Old_Customers =
  
 Lost_Customers = 
         var selected_period = SELECTEDVALUE(Months[ID])
-        var current_month = EOMONTH(MAX(Calender[Date]),0)
+        var current_month = MAX(Calender[Date])
         var previous_month = EOMONTH(current_month,-selected_period+1)
         var all_unique_customers_till_date = 
                     DISTINCT(
                         SELECTCOLUMNS(
                             FILTER(ALL(Data),
                                     [Invoice_Date_EOM] <= current_month),"Customers_ID",[Customer ID]))
-        var all_customers_selected_month = 
+        var all_unique_customers_in_selected_period = 
                 DISTINCT(
                     SELECTCOLUMNS(
                         FILTER(ALL(Data),
                             [Invoice_Date_EOM] >= previous_month &&  [Invoice_Date_EOM] <= current_month),
                                 "Customer_ID",[Customer ID]))
-        return COUNTROWS(EXCEPT(all_unique_customers_till_date , all_customers_selected_month))
+        return COUNTROWS(EXCEPT(all_unique_customers_till_date , all_unique_customers_in_selected_period))
+        
 ```
