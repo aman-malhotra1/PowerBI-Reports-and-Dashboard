@@ -77,3 +77,4 @@ Lost_Customers =
         return COUNTROWS(EXCEPT(all_unique_customers_till_date , all_unique_customers_in_selected_period))
         
 ```
+![Screenshot (92)](https://user-images.githubusercontent.com/19778041/160233575-145b944c-13f8-419b-8851-ac2b045db1ee.png)
