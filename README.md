@@ -78,3 +78,13 @@ Lost_Customers =
         
 ```
 ![Screenshot (92)](https://user-images.githubusercontent.com/19778041/160233575-145b944c-13f8-419b-8851-ac2b045db1ee.png)
+
+### => Customers Count with Single Invoice
+```
+Customer_Count_With_single_Invoice = 
+        COUNTROWS(
+            Filter(
+                    SUMMARIZE(
+                            Data,[Customer ID],"Unique_Orders",DISTINCTCOUNT(Data[Invoice])),
+                                [Unique_Orders]=1) )
+```
