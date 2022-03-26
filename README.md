@@ -31,6 +31,15 @@ Top_10_Products =
                             IF(RANKX(All('Product'),[Total_Sales],,DESC) <=10,[Total_Sales],BLANK())))
 
 ```
+### No. of Products with more than Avg Selling Price
+```
+Count_products_more_than_average_selling_price = 
+            var avg_selling_price = AVERAGE('Product'[UnitPrice])
+            return              COUNTROWS(
+                                    CALCULATETABLE('Product',
+                                                FILTER('Product',[UnitPrice] > avg_selling_price)))
+```                                             
+
 
 ### => Stock Price Percentage Difference from date selected
 
