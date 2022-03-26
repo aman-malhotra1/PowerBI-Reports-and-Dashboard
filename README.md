@@ -8,6 +8,15 @@ Most_Expensive_Product =
             VALUES('Product'[ProductName]), 
             Calculate(Max('Product'[UnitPrice])), DESC),1)
   ```
+  
+### Get the Most Selling Product 
+```
+Most_Selling_Product = 
+            TOPN(
+                1,VALUES('Product'[ProductName]),
+                                CALCULATE(SUMX(Sales,[SalesAmount])),DESC)
+```                          
+
 ### => Total Sales by Top 10 Products
 ```
 Total_Sales_Top_10_Products = 
