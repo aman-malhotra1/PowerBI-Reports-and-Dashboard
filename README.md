@@ -49,3 +49,30 @@ https://app.powerbi.com/view?r=eyJrIjoiOWNiMDEzZmYtNTAzMS00NDdhLTgwZTUtZmExZjBhY
 ### => Sales Percentage Summarize by Region and Year
 https://app.powerbi.com/view?r=eyJrIjoiZDZkMzQ1NGYtYjZkZC00ZTI5LTljYzQtMDAxNjBlNjIxZDNjIiwidCI6IjQ5OWJjMjFhLTc2NDAtNGJmZi1hNjMzLTU3NmY0NmZkNmJmNCJ9
 ![Screenshot (91)](https://user-images.githubusercontent.com/19778041/160074104-face1a4d-3c4f-4623-9a67-8a0e92332f44.png)
+
+### New Customers , Old Customers , Lost Customers 
+```
+New_Customers = 
+            CALCULATE([Total_Customers] ,
+                        FILTER(Data,[Invoice_Date_EOM] = [Customer_First_Purchase_date_EOM]))
+                        
+Old_Customers = 
+            [Total_Customers] - [New_Customers]
+ 
+Lost_Customers = 
+        var selected_period = SELECTEDVALUE(Months[ID])
+        var current_month = EOMONTH(MAX(Calender[Date]),0)
+        var previous_month = EOMONTH(current_month,-selected_period+1)
+        var all_unique_customers_till_date = 
+                    DISTINCT(
+                        SELECTCOLUMNS(
+                            FILTER(ALL(Data),
+                                    [Invoice_Date_EOM] <= current_month),"Customers_ID",[Customer ID]))
+        var all_customers_selected_month = 
+                DISTINCT(
+                    SELECTCOLUMNS(
+                        FILTER(ALL(Data),
+                            [Invoice_Date_EOM] >= previous_month &&  [Invoice_Date_EOM] <= current_month),
+                                "Customer_ID",[Customer ID]))
+        return COUNTROWS(EXCEPT(all_unique_customers_till_date , all_customers_selected_month))
+```
