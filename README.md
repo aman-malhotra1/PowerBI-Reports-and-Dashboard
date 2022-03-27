@@ -150,3 +150,8 @@ Moving_Average =
 https://app.powerbi.com/view?r=eyJrIjoiNTQ2NzhmNzQtZjUyYi00YjliLTkxMmYtZWFlZWI4OThkMmY3IiwidCI6IjQ5OWJjMjFhLTc2NDAtNGJmZi1hNjMzLTU3NmY0NmZkNmJmNCJ9
 
 ![Screenshot (99)](https://user-images.githubusercontent.com/19778041/160268173-06b795a0-6b7e-46ca-9cf3-cd5a99423061.png)
+
+### => Comapany Report
+https://app.powerbi.com/view?r=eyJrIjoiMGRhMTI4MjctMTFmMC00ODk3LTgzOTItMzQ1Y2NmNTZkYjdjIiwidCI6IjQ5OWJjMjFhLTc2NDAtNGJmZi1hNjMzLTU3NmY0NmZkNmJmNCJ9
+
+![Screenshot (100)](https://user-images.githubusercontent.com/19778041/160268338-03cf68fa-0fba-48b0-9fa1-2d48f1144bf4.png)
