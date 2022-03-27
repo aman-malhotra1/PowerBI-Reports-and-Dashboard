@@ -89,7 +89,7 @@ Customer_Count_With_single_Invoice =
                                 [Unique_Orders]=1) )
 ```
 
-### Sales Segmentation as per Profit Margin
+### => Sales Segmentation as per Profit Margin
 ```
 Sales_Segmentation = 
             CALCULATE([Total_Sales],
@@ -100,6 +100,46 @@ Sales_Segmentation =
                                     Margin_table[Margin Percentage] <Margin_Type[Max]))>0
                     ))   
 ```            
+
 ![Screenshot (95)](https://user-images.githubusercontent.com/19778041/160267666-8ffe7f3b-4c28-4c10-a0a7-c8fe188d23fd.png)
 
 ![Screenshot (94)](https://user-images.githubusercontent.com/19778041/160267670-3074eac2-503b-491b-8879-fe9fbba7266d.png)
+
+### -> Time based DAX calculations
+```
+Commulative_Sales = 
+            var current_month = MAX(Calender_Table[Date])
+            return 
+                CALCULATE([Total_Sales] , 
+                        FILTER(ALL(Calender_Table ), 
+                                    [Date]<= current_month))
+
+Commulative_Sales_Yearly = 
+            var current_year = year(Max(Calender_Table[Date]))
+            var current_date = Max(Calender_Table[Date])
+            return 
+                CALCULATE([Total_Sales] ,
+                        FILTER(All(Calender_Table),
+                                [Date]<=current_date && [Year] = current_year))
+                                
+Previous_Month_Sales = 
+            CALCULATE(
+                    [Total_Sales] , 
+                            DATEADD((Calender_Table[Date]),-1,MONTH))
+                            
+Same_Period_Last_Year_ = 
+                CALCULATE([Total_Sales],
+                            SAMEPERIODLASTYEAR(Calender_Table[Date]))
+
+Moving_Average = 
+        var moving_average_window = 2
+        var current_date = Max(Calender_Table[Date])
+        var previous_date =  EOMONTH(current_date,-moving_average_window-1)
+        return 
+            DIVIDE(
+                   CALCULATE([Total_Sales] , 
+                     FILTER(All(Calender_Table),
+                       [Date]> previous_date && [Date]<= EOMONTH(current_date,-1))),
+                   moving_average_window,0)
+
+```
