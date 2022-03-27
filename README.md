@@ -105,7 +105,7 @@ Sales_Segmentation =
 
 ![Screenshot (94)](https://user-images.githubusercontent.com/19778041/160267670-3074eac2-503b-491b-8879-fe9fbba7266d.png)
 
-### -> Time based DAX calculations
+### => Date based DAX calculations
 ```
 Commulative_Sales = 
             var current_month = MAX(Calender_Table[Date])
@@ -143,3 +143,7 @@ Moving_Average =
                    moving_average_window,0)
 
 ```
+
+![Screenshot (97)](https://user-images.githubusercontent.com/19778041/160267931-46206e8c-ef00-4ad4-826a-b0d5f21d9884.png)
+
+
