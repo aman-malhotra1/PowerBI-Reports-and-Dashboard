@@ -9,7 +9,7 @@ Most_Expensive_Product =
             Calculate(Max('Product'[UnitPrice])), DESC),1)
   ```
   
-### Get the Most Selling Product 
+### =>Get the Most Selling Product 
 ```
 Most_Selling_Product = 
             TOPN(
@@ -31,7 +31,7 @@ Top_10_Products =
                             IF(RANKX(All('Product'),[Total_Sales],,DESC) <=10,[Total_Sales],BLANK())))
 
 ```
-### No. of Products with more than Avg Selling Price
+### => No. of Products with more than Avg Selling Price
 ```
 Count_products_more_than_average_selling_price = 
             var avg_selling_price = AVERAGE('Product'[UnitPrice])
@@ -88,3 +88,18 @@ Customer_Count_With_single_Invoice =
                             Data,[Customer ID],"Unique_Orders",DISTINCTCOUNT(Data[Invoice])),
                                 [Unique_Orders]=1) )
 ```
+
+### Sales Segmentation as per Profit Margin
+```
+Sales_Segmentation = 
+            CALCULATE([Total_Sales],
+                FILTER(VALUES(Margin_table[Margin Percentage]),
+                    COUNTROWS(
+                            FILTER(Margin_Type,
+                                    Margin_table[Margin Percentage]>= Margin_Type[Min] && 
+                                    Margin_table[Margin Percentage] <Margin_Type[Max]))>0
+                    ))   
+```            
+![Screenshot (95)](https://user-images.githubusercontent.com/19778041/160267666-8ffe7f3b-4c28-4c10-a0a7-c8fe188d23fd.png)
+
+![Screenshot (94)](https://user-images.githubusercontent.com/19778041/160267670-3074eac2-503b-491b-8879-fe9fbba7266d.png)
