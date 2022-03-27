@@ -146,4 +146,8 @@ Moving_Average =
 
 ![Screenshot (97)](https://user-images.githubusercontent.com/19778041/160267931-46206e8c-ef00-4ad4-826a-b0d5f21d9884.png)
 
+### => Sector Report for IHS Markit 
+https://app.powerbi.com/view?r=eyJrIjoiNTQ2NzhmNzQtZjUyYi00YjliLTkxMmYtZWFlZWI4OThkMmY3IiwidCI6IjQ5OWJjMjFhLTc2NDAtNGJmZi1hNjMzLTU3NmY0NmZkNmJmNCJ9
+
+![Screenshot (98)](https://user-images.githubusercontent.com/19778041/160268146-060ee86c-3efc-4951-b604-4adf06ef817b.png)
 
