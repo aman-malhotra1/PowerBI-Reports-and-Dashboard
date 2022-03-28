@@ -155,3 +155,7 @@ https://app.powerbi.com/view?r=eyJrIjoiNTQ2NzhmNzQtZjUyYi00YjliLTkxMmYtZWFlZWI4O
 https://app.powerbi.com/view?r=eyJrIjoiMGRhMTI4MjctMTFmMC00ODk3LTgzOTItMzQ1Y2NmNTZkYjdjIiwidCI6IjQ5OWJjMjFhLTc2NDAtNGJmZi1hNjMzLTU3NmY0NmZkNmJmNCJ9
 
 ![Screenshot (100)](https://user-images.githubusercontent.com/19778041/160268338-03cf68fa-0fba-48b0-9fa1-2d48f1144bf4.png)
+
+### => Pie Bakery Analysis
+
+![Screenshot (101)](https://user-images.githubusercontent.com/19778041/160334977-f48f2f87-cb2d-4138-8d7f-7233c5be50d9.png)
