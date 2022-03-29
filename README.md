@@ -164,13 +164,15 @@ https://app.powerbi.com/view?r=eyJrIjoiOGEyY2ZhMDYtOWExNS00NmVjLTgyNzYtNDBhYTQxN
 ### => Create Calender Table
 ```
 Calender_Table = 
+        ADDCOLUMNS(
             ADDCOLUMNS(
                     CALENDAR(min(Sales[DateKey]), MAX(Sales[DateKey])),
                     "Year" , YEAR([Date]),
                     "Month_ID", MONTH([Date]),
                     "Qtr_ID", QUARTER([Date]),
                     "Month_Name", FORMAT([Date], "MMMM"),
-                    "Quarter", "Qtr_" & QUARTER([Date]),
                     "Day" , FORMAT([Date],"DDDD"),
-                    "End Of Month",EOMONTH([Date],0))
+                    "End Of Month",EOMONTH([Date],0)),
+            "Quarter", "Qtr_" & [Qtr_ID],
+            "Year_Month" , FORMAT([Date], "MMMM YYYY"))
 ```
