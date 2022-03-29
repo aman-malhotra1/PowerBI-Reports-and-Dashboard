@@ -1,11 +1,18 @@
 ## PowerBI-Reports-and-Dashboard
 
-### Customer Retention Analysis
+### => Customer Retention Analysis
 https://app.powerbi.com/view?r=eyJrIjoiNDkxM2UxYjEtMTczZi00NDg2LTlkYWEtMmE3ZDVkMjJmM2JhIiwidCI6IjFhNDc1OGYwLTk2ZTctNDdjOC1iZThlLWY1YjA2YmRiOGU0NSJ9&pageName=ReportSection9e18d82523911fba6e35
 
 ![Screenshot (102)](https://user-images.githubusercontent.com/19778041/160593524-41c8df86-be6c-41ea-8325-58b897016900.png)
 
 ![Screenshot (103)](https://user-images.githubusercontent.com/19778041/160593582-be625d51-a5de-4bc9-8b6e-2bcbf0267d6c.png)
+
+### => Sales Analysis
+https://app.powerbi.com/view?r=eyJrIjoiOGUzYmJhM2QtYjhjYi00MGExLWEyMWMtODRmNjcwMGZmMzU2IiwidCI6IjFhNDc1OGYwLTk2ZTctNDdjOC1iZThlLWY1YjA2YmRiOGU0NSJ9&pageName=ReportSection
+
+![Screenshot (104)](https://user-images.githubusercontent.com/19778041/160593790-5d30472c-f98a-4f11-ac8c-aeee79fdcc19.png)
+
+![Screenshot (105)](https://user-images.githubusercontent.com/19778041/160593780-7a5d2962-3908-40ef-b2b2-3cd83ed05157.png)
 
 ### => Get the Most Expensive Product
 
