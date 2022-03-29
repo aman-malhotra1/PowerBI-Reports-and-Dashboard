@@ -161,7 +161,7 @@ https://app.powerbi.com/view?r=eyJrIjoiOGEyY2ZhMDYtOWExNS00NmVjLTgyNzYtNDBhYTQxN
 
 ![Screenshot (101)](https://user-images.githubusercontent.com/19778041/160334977-f48f2f87-cb2d-4138-8d7f-7233c5be50d9.png)
 
-### => Create Calender Table
+### => Create Calender Table Using Add columns
 ```
 Calender_Table = 
         ADDCOLUMNS(
