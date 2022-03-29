@@ -163,7 +163,7 @@ https://app.powerbi.com/view?r=eyJrIjoiOGEyY2ZhMDYtOWExNS00NmVjLTgyNzYtNDBhYTQxN
 
 ### => Create Calender Table
 ```
-Calender_Table_1 = 
+Calender_Table = 
             ADDCOLUMNS(
                     CALENDAR(min(Sales[DateKey]), MAX(Sales[DateKey])),
                     "Year" , YEAR([Date]),
