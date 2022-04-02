@@ -192,3 +192,27 @@ Calender_Table =
             "Quarter", "Qtr_" & [Qtr_ID],
             "Year_Month" , FORMAT([Date], "MMMM YYYY"))
 ```
+### -> Creating Table Showing Top 5 Customers Name by sales who purchaed that Model Using ConcatinateX
+```
+ConcatenateX_Example_1 =
+FILTER (
+    ADDCOLUMNS (
+        VALUES ( 'Product'[Model] ),
+        "All_Customers",
+            CONCATENATEX (
+                TOPN (
+                    3,
+                    CALCULATETABLE (
+                        VALUES ( Customer[Customer] ),
+                        CROSSFILTER ( Sales[CustomerKey], Customer[CustomerKey], BOTH )
+                    ),
+                    [Total_Sales], DESC
+                ),
+                Customer[Customer],
+                ",",
+                Customer[Customer], DESC
+            )
+    ),
+    [All_Customers] <> BLANK ()
+        && [All_Customers] <> "[Not Applicable]"
+```
