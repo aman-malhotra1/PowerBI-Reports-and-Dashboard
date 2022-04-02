@@ -193,7 +193,8 @@ Calender_Table =
             "Year_Month" , FORMAT([Date], "MMMM YYYY"))
 ```
 ### -> Creating Table Showing Top 5 Customers Name by sales who purchaed that Model Using ConcatinateX
-```Customer Names With Product Brand = 
+```
+Customer Names With Product Brand = 
 FILTER(
         ADDCOLUMNS(
                 VALUES('Product'[Model]),
